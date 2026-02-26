@@ -133,6 +133,7 @@ class X509Metrics:
 			build_date = dict_get(os.environ, "APP_BUILD_DATE", "unknown")
 			sha = dict_get(os.environ, "APP_BUILD_SHA", "unknown")
 			self.build_info.labels(version=ver, ref=ref, build_date=build_date, sha=sha).set(1)
+			
 	def run_metrics_loop(self):
 		"""Metrics fetching loop"""
 		while True:
