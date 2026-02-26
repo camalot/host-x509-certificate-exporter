@@ -157,8 +157,8 @@ class X509Metrics:
 				# parse certificate
 				x509_cert = x509.load_pem_x509_certificate(cert.encode())
 				# get expiration date
-				expiration_date = x509_cert.not_valid_after.replace(tzinfo=pytz.UTC)
-				issued_date = x509_cert.not_valid_before.replace(tzinfo=pytz.UTC)
+				expiration_date = x509_cert.not_valid_after_utc
+				issued_date = x509_cert.not_valid_before_utc
 				serial = x509_cert.serial_number
 				issuer = x509_cert.issuer
 				subject = x509_cert.subject
