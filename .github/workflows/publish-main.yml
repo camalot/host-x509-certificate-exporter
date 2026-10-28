@@ -23,9 +23,9 @@ jobs:
       contents: read
     runs-on: ubuntu-latest
     outputs:
-      ver_major_minor_patch: ${{ steps.semvers.outputs.major_minor_patch }}
-      ver_major_minor: ${{ steps.semvers.outputs.major_minor }}
-      ver_major: ${{ steps.semvers.outputs.major }}
+      ver_major_minor_patch: ${{ steps.semvers.outputs.ver_major_minor_patch }}
+      ver_major_minor: ${{ steps.semvers.outputs.ver_major_minor }}
+      ver_major: ${{ steps.semvers.outputs.ver_major }}
       tag: ${{ steps.semvers.outputs.tag_major_minor_patch }}
       tag_major: ${{ steps.semvers.outputs.tag_major }}
       tag_major_minor: ${{ steps.semvers.outputs.tag_major_minor }}
