@@ -1,6 +1,6 @@
-prometheus_client~=0.24.1
+prometheus_client~=0.26
 pyyaml~=6.0
 python-dotenv~=1.2
-requests~=2.32
-cryptography~=46.0
-pytz~=2025.2
+requests~=2.34
+cryptography~=50.0
+pytz~=2026.5
