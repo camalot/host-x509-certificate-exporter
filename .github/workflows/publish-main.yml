@@ -67,11 +67,11 @@ jobs:
         {
           echo current=$current
           echo ver_major_minor_patch=$patch
-          echo ver_major_minor=$minor
-          echo ver_major=$major
+          echo ver_major_minor=${patch%.*}
+          echo ver_major=${patch%%.*}
           echo tag_major_minor_patch="$v_patch"
-          echo tag_major_minor="$v_minor"
-          echo tag_major="$v_major"
+          echo tag_major_minor="${v_patch%.*}"
+          echo tag_major="${v_patch%%.*}"
           echo tag_current="$v_current"
         } >> "$GITHUB_OUTPUT"
 
