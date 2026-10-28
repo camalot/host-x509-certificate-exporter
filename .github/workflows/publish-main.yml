@@ -134,7 +134,7 @@ jobs:
       uses: docker/build-push-action@v7
       with:
         push: ${{ !inputs.dry_run }}
-        load: ${{ inputs.dry_run }}
+        load: ${{ inputs.dry_run == true }}
         provenance: ${{ inputs.dry_run && 'false' || 'mode=max' }}
         sbom: ${{ !inputs.dry_run }}
         build-args: |
