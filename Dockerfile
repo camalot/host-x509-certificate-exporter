@@ -18,11 +18,9 @@ LABEL PROJECT_NAME="${PROJECT_NAME}"
 COPY . /app
 
 RUN \
-  apk update && \
-  pip install --upgrade pip && \
-  pip install -r /app/setup/requirements.txt && \
-  rm -rf /app/setup && \
-  rm -rf /var/cache/apk/*
+  pip install --no-cache-dir --upgrade pip && \
+  pip install --no-cache-dir -r /app/setup/requirements.txt && \
+  rm -rf /app/setup
 
 VOLUME ["/config"]
 WORKDIR /app
