@@ -3,4 +3,4 @@ pyyaml~=6.0
 python-dotenv~=1.2
 requests~=2.34
 cryptography~=50.0
-pytz~=2026.5
+pytz~=2026.6
